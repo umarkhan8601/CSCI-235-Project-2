@@ -12,25 +12,23 @@ PlayList::PlayList(const Song& a_song)
     playlist_.add(a_song);
 
 }
-
-int PlayList::getNumberOfSongs() const{
-	return playlist_.getCurrentSize();
+template <class ItemType>
+int PlayList<ItemType>::getNumberOfSongs() const{
+	Set<ItemType>::getCurrentSize();
 }
 
+template <class ItemType>
 bool PlayList::isEmpty() const{
-	if(playlist_.size() == 0){
-		return true;
-	}
-	return false;
+	
 }
-
+template <class ItemType>
 bool PlayList::addSong(const Song& new_song){
 	if(playlist_.add(new_song) == true){
 		return true;
 	}
 	return false;
 }
-
+template <class ItemType>
 bool PlayList::removeSong(const Song& a_song){
 	if(playlist_.remove(a_song) == 0){
 		return true;
@@ -38,7 +36,7 @@ bool PlayList::removeSong(const Song& a_song){
 	return false;
 
 }
-
+template <class ItemType>
 void PlayList::clearPlayList()
 {
     // clear function removes all elements from set
@@ -46,10 +44,11 @@ void PlayList::clearPlayList()
 }
 
 
-
+template <class ItemType>
 void PlayList::displayPlayList() const{
 
-	playlist_.toVector();
+	vector<int> v = playlist_.toVector();
+	cout << v << endl; 
 
 }
 

@@ -9,7 +9,7 @@
 using namespace std;
 
 
-class PlayList
+class PlayList : public Set<ItenType>
 {
 public:
 

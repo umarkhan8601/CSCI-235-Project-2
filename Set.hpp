@@ -18,7 +18,7 @@ public:
 
     @return The integer number of entries currently in the set. */
 
-   int getCurrentSize()  = 0;
+   int getCurrentSize();
 
    
 
@@ -40,7 +40,7 @@ public:
 
     @return  True if addition was successful, or false if not. */
 
-    bool add(const ItemType& newEntry) = 0;
+    bool add(const ItemType& newEntry);
 
    
 
@@ -54,7 +54,7 @@ public:
 
     @return  True if removal was successful, or false if not. */
 
-    bool remove(const ItemType& anEntry) = 0;
+    bool remove(const ItemType& anEntry);
 
    
 
@@ -62,7 +62,7 @@ public:
 
     @post  set contains no items, and the count of items is 0. */
 
-    void clear() = 0;
+    void clear();
 
    
 
@@ -72,7 +72,7 @@ public:
 
     @return  True if set contains anEntry, or false otherwise. */
 
-    bool contains(const ItemType& anEntry)  = 0;
+    bool contains(const ItemType& anEntry);
 
    
 
